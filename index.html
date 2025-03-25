@@ -41,32 +41,18 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
         }
-        h1 {
-            font-size: 36px;
-            color: #ffcc00;
-        }
-        h2 {
-            font-size: 24px;
-            color: #ffcc00;
-        }
-        p {
-            font-size: 18px;
-            color: #d1d1d1;
-        }
-        .highlight {
-            color: #ffcc00;
-            font-weight: bold;
-        }
-        .contact-info {
+        .buttons {
             margin-top: 20px;
-            font-size: 18px;
         }
-        .contact-info p {
-            margin: 5px 0;
-            color: #d1d1d1;
-        }
-        .contact-info span {
-            color: #ffcc00;
+        .buttons button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #ffcc00;
+            color: #2e3b4e;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -77,7 +63,7 @@
     </video>
     
     <div class="container">
-        <img src="profile.jpg" alt="Foto de perfil" class="profile-img">
+        <img id="profileImage" src="images/profile1.jpg" alt="Foto de perfil" class="profile-img">
         <div class="info">
             <h1>Delfina Avalos</h1>
             <h2>Estudiante de Programación</h2>
@@ -92,6 +78,20 @@
                 <p><strong>Correo:</strong> <span>delfiavalos35@gmail.com</span></p>
             </div>
         </div>
+        
+        <div class="buttons">
+            <button data-img="profile1.jpg">Imagen 1</button>
+            <button data-img="profile2.jpg">Imagen 2</button>
+            <button data-img="profile3.jpg">Imagen 3</button>
+        </div>
     </div>
+
+    <script>
+        document.querySelectorAll(".buttons button").forEach(button => {
+            button.addEventListener("click", function() {
+                document.getElementById("profileImage").src = "images/" + this.getAttribute("data-img");
+            });
+        });
+    </script>
 </body>
 </html>
