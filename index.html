@@ -8,20 +8,16 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             color: white;
             text-align: center;
-            background-color: #1e2a35; /* Fondo oscuro */
-            background-image: url('profile.jpg'); /* Imagen de perfil como fondo */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #2e3b4e;
         }
         .background-video {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 50%;
             height: 100%;
             object-fit: cover;
             z-index: -1;
@@ -30,51 +26,47 @@
             position: relative;
             z-index: 1;
             margin-top: 50px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .info {
+            background: rgba(0, 0, 0, 0.7);
+            display: inline-block;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro detrás del contenido */
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
         }
         h1 {
             font-size: 36px;
-            color: #4caf50; /* Verde suave */
-            margin-bottom: 10px;
+            color: #ffcc00;
         }
         h2 {
             font-size: 24px;
-            color: #ff9800; /* Naranja suave */
-            margin-bottom: 20px;
+            color: #ffcc00;
         }
         p {
             font-size: 18px;
-            color: #b0bec5; /* Gris suave */
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: #d1d1d1;
         }
         .highlight {
-            color: #ff5722; /* Rojo anaranjado */
+            color: #ffcc00;
             font-weight: bold;
         }
         .contact-info {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 18px;
-            color: #b0bec5;
         }
         .contact-info p {
-            margin: 10px 0;
+            margin: 5px 0;
+            color: #d1d1d1;
         }
         .contact-info span {
-            color: #ff9800; /* Naranja suave */
-        }
-        a {
-            color: #4caf50; /* Verde suave */
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            color: #ffcc00;
         }
     </style>
 </head>
@@ -85,19 +77,20 @@
     </video>
     
     <div class="container">
-        <h1>Delfina Avalos</h1>
-        <h2>Estudiante de Programación</h2>
-        
-        <p>
-            Terminé mis estudios secundarios en el <span class="highlight">Instituto Presbítero Manuel Alberti</span> 
-            y actualmente estoy cursando el <span class="highlight">segundo año de la carrera de Programación</span> 
-            en la <span class="highlight">Universidad Tecnológica Nacional (UTN)</span>.
-        </p>
-        
-        <div class="contact-info">
-            <p><span>Teléfono:</span> 3777200383</p>
-            <p><span>Correo Electrónico:</span> <a href="mailto:delfiavalos35@gmail.com">delfiavalos35@gmail.com</a></p>
-            <p><span>Residencia:</span> Goya, Ctes, Argentina</p>
+        <img src="profile.jpg" alt="Foto de perfil" class="profile-img">
+        <div class="info">
+            <h1>Delfina Avalos</h1>
+            <h2>Estudiante de Programación</h2>
+            <p><strong>Fecha de nacimiento:</strong> 22 de mayo de 2006</p>
+            <p><strong>Residencia:</strong> Goya, Ctes, Argentina</p>
+            <p><strong>Idiomas:</strong> Español (nativo), Inglés (básico)</p>
+            <p><strong>Educación:</strong></p>
+            <p>Finalicé mis estudios secundarios en el <span class="highlight">Instituto Presbítero Manuel Alberti</span>.</p>
+            <p>Actualmente, estoy cursando el <span class="highlight">segundo año</span> de la carrera de <span class="highlight">Programación</span> en la UTN.</p>
+            <div class="contact-info">
+                <p><strong>Teléfono:</strong> <span>3777200383</span></p>
+                <p><strong>Correo:</strong> <span>delfiavalos35@gmail.com</span></p>
+            </div>
         </div>
     </div>
 </body>
